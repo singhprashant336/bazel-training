@@ -1,0 +1,12 @@
+py_test(
+    name="test1",
+    imports=["lxml"],
+    srcs=[":srcs/test1.py"],
+    main=":srcs/test1.py",
+)
+py_test(
+    name="test2",
+    imports=["yattag"],
+    srcs=[":srcs/test1.py"],
+    main=":srcs/test1.py",
+)

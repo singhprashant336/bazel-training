@@ -1,0 +1,4 @@
+try-import "user.bazelrc"
+build:py_tool --extra_toolchains=//third_party/python:python_toolchain
+build:py_tool --platforms=//bazel/platforms:windows_python
+build:py_tool --incompatible_use_python_toolchains
