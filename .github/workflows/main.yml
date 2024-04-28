@@ -1,1 +1,8 @@
-runs-on: self-hosted
+name: bazel-training
+on: [push]
+jobs:
+  bazel-build-program:
+    runs-on: [self-hosted, Windows, X64]
+    steps:
+      - uses: actions/checkout@v4
+      - run: bazel --output_base=C:\actions-runner\_work\_temp\ci-bazel-out run --config py_tool //main:hello_world
