@@ -6,5 +6,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: bazel --output_base=C:\actions-runner\_work\_temp\ci-bazel-out build --config py_tool //main:hello_world
-      # - run: bazel --output_base=C:\actions-runner\_work\_temp\ci-bazel-out run --config py_tool //main:hello_world
+      - run: bazel --output_base=C:\actions-runner\_work\_temp\ci-bazel-out run --config py_tool //main:hello_world
       - run: bazel --output_base=C:\actions-runner\_work\_temp\ci-bazel-out test --config py_tool //main/tests/...
